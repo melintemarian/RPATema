@@ -190,125 +190,28 @@ end;</layout>
         <ml id="ID1413013595">fun filterSelect(Pereche:Ldrept)= if #2 Pereche = select then true else false;
           <layout>fun filterSelect(Pereche:Ldrept)= if #2 Pereche = select then true else false;</layout>
         </ml>
-        <color id="ID1413163287">
-          <id>Grupa</id>
-          <enum>
-            <id>A</id>
-            <id>B</id>
-            <id>E</id>
-          </enum>
-          <layout>colset Grupa = with A|B|E;</layout>
-        </color>
-        <color id="ID1413167562">
-          <id>An</id>
-          <int>
-            <with>
-              <ml>1</ml>
-              <ml>3</ml>
-            </with>
-          </int>
-          <layout>colset An = int with 1..3;</layout>
-        </color>
-        <color id="ID1413158460">
-          <id>Student</id>
-          <product>
-            <id>INT</id>
-            <id>STRING</id>
-            <id>STRING</id>
-            <id>Grupa</id>
-            <id>An</id>
-          </product>
-          <layout>colset Student = product INT*STRING*STRING*Grupa*An;</layout>
-        </color>
-        <color id="ID1413188025">
-          <id>Curs</id>
-          <product>
-            <id>INT</id>
-            <id>STRING</id>
-            <id>An</id>
-          </product>
-          <layout>colset Curs = product INT*STRING*An;</layout>
-        </color>
-        <color id="ID1413194502">
-          <id>Val</id>
-          <int>
-            <with>
-              <ml>1</ml>
-              <ml>10</ml>
-            </with>
-          </int>
-          <layout>colset Val = int with 1..10;</layout>
-        </color>
-        <color id="ID1413192857">
-          <id>Nota</id>
-          <product>
-            <id>INT</id>
-            <id>INT</id>
-            <id>Val</id>
-          </product>
-          <layout>colset Nota = product INT*INT*Val;</layout>
-        </color>
-        <color id="ID1413198653">
-          <id>Sala</id>
-          <product>
-            <id>INT</id>
-            <id>INT</id>
-          </product>
-          <layout>colset Sala = product INT*INT;</layout>
-        </color>
         <color id="ID1413202024">
-          <id>Profesor</id>
+          <id>Tabel</id>
           <product>
             <id>INT</id>
             <id>STRING</id>
             <id>STRING</id>
-            <id>STRING</id>
           </product>
-          <layout>colset Profesor = product INT*STRING*STRING*STRING;</layout>
+          <layout>colset Tabel = product INT*STRING*STRING;</layout>
         </color>
-        <color id="ID1413206307">
-          <id>Licenta</id>
-          <product>
-            <id>INT</id>
-            <id>INT</id>
+        <color id="ID1413219509">
+          <id>StringList</id>
+          <list>
             <id>STRING</id>
-          </product>
-          <layout>colset Licenta = product INT*INT*STRING;</layout>
-        </color>
-        <color id="ID1413209787">
-          <id>STUDENTI</id>
-          <list>
-            <id>Student</id>
           </list>
-          <layout>colset STUDENTI = list Student;</layout>
+          <layout>colset StringList= list STRING;</layout>
         </color>
-        <color id="ID1413211548">
-          <id>NOTE</id>
+        <color id="ID1413273316">
+          <id>TABELE</id>
           <list>
-            <id>Nota</id>
+            <id>Tabel</id>
           </list>
-          <layout>colset NOTE = list Nota;</layout>
-        </color>
-        <color id="ID1413213321">
-          <id>SALI</id>
-          <list>
-            <id>Sala</id>
-          </list>
-          <layout>colset SALI = list Sala;</layout>
-        </color>
-        <color id="ID1413215106">
-          <id>PROFESORI</id>
-          <list>
-            <id>Profesor</id>
-          </list>
-          <layout>colset PROFESORI = list Profesor;</layout>
-        </color>
-        <color id="ID1413216903">
-          <id>LICENTE</id>
-          <list>
-            <id>Licenta</id>
-          </list>
-          <layout>colset LICENTE = list Licenta;</layout>
+          <layout>colset TABELE = list Tabel;</layout>
         </color>
       </block>
     </globbox>
@@ -557,7 +460,7 @@ end;</layout>
                    currentcyckle="2"/>
         <transend idref="ID1412323382"/>
         <placeend idref="ID1412323435"/>
-        <annot id="ID1413082261">
+        <annot id="ID1413217021">
           <posattr x="50.000000"
                    y="124.000000"/>
           <fillattr colour="White"
@@ -1679,7 +1582,7 @@ Select</text>
                    currentcyckle="2"/>
         <transend idref="ID1412328813"/>
         <placeend idref="ID1412330163"/>
-        <annot id="ID1413082262">
+        <annot id="ID1413217022">
           <posattr x="300.000000"
                    y="53.000000"/>
           <fillattr colour="White"
@@ -2121,7 +2024,7 @@ Select</text>
                    currentcyckle="2"/>
         <transend idref="ID1412716355"/>
         <placeend idref="ID1412729099"/>
-        <annot id="ID1413082263">
+        <annot id="ID1413217023">
           <posattr x="178.000000"
                    y="149.000000"/>
           <fillattr colour="White"
@@ -2964,7 +2867,7 @@ Select</text>
                 version="4.0.1">UNIT</text>
         </type>
         <initmark id="ID1413059798">
-          <posattr x="-33.000000"
+          <posattr x="-42.000000"
                    y="-79.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3456,7 +3359,7 @@ select</text>
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="Solid"/>
+                  type="solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>Procesare
@@ -3856,9 +3759,9 @@ restul</text>
                    currentcyckle="2"/>
         <transend idref="ID1413040532"/>
         <placeend idref="ID1413059796"/>
-        <annot id="ID1413091877">
-          <posattr x="5.000000"
-                   y="-40.000000"/>
+        <annot id="ID1413217024">
+          <posattr x="3.000000"
+                   y="-39.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3923,15 +3826,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-72.000000"
-                 y="41.000000"
+        <marking x="-37.000000"
+                 y="33.000000"
                  hidden="false">
           <snap snap_id="0"
-                anchor.horizontal="3"
+                anchor.horizontal="2"
                 anchor.vertical="2"/>
         </marking>
         <type id="ID1413085460">
-          <posattr x="-112.000000"
+          <posattr x="-120.000000"
                    y="124.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3942,10 +3845,10 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">STUDENTI</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413186433">
-          <posattr x="-531.000000"
+          <posattr x="-483.000000"
                    y="148.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3956,7 +3859,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,&quot;Popescu&quot;,&quot;Alex&quot;,A,1),(2,&quot;Ionescu&quot;,&quot;Bogdan&quot;,B,2),(3,&quot;Georgescu&quot;,&quot;Silviu&quot;,E,3),(4,&quot;Anton&quot;,&quot;Vlad&quot;,B,2)]</text>
+                version="4.0.1">[(1,&quot;Popescu&quot;,&quot;Alex&quot;),(2,&quot;Ionescu&quot;,&quot;Bogdan&quot;),(3,&quot;Georgescu&quot;,&quot;Silviu&quot;),(4,&quot;Anton&quot;,&quot;Vlad&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413085590">
@@ -3975,15 +3878,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-41.000000"
-                 y="-45.000000"
+        <marking x="-24.000000"
+                 y="-54.000000"
                  hidden="false">
           <snap snap_id="0"
                 anchor.horizontal="3"
                 anchor.vertical="1"/>
         </marking>
         <type id="ID1413085591">
-          <posattr x="121.500000"
+          <posattr x="131.000000"
                    y="-86.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3994,11 +3897,11 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">Sala</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413200330">
-          <posattr x="97.000000"
-                   y="-98.000000"/>
+          <posattr x="102.000000"
+                   y="-103.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4008,7 +3911,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(202,150),(309,70),(403,15),(405,15),(112,100)]</text>
+                version="4.0.1">[(1,&quot;2&quot;,&quot;150&quot;),(2,&quot;3&quot;,&quot;70&quot;),(3,&quot;4&quot;,&quot;15&quot;),(4,&quot;5&quot;,&quot;15&quot;),(5,&quot;2&quot;,&quot;100&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413085724">
@@ -4027,15 +3930,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-8.000000"
-                 y="38.000000"
+        <marking x="-13.000000"
+                 y="50.000000"
                  hidden="false">
           <snap snap_id="0"
-                anchor.horizontal="2"
+                anchor.horizontal="3"
                 anchor.vertical="2"/>
         </marking>
         <type id="ID1413085725">
-          <posattr x="123.000000"
+          <posattr x="131.000000"
                    y="124.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4046,11 +3949,11 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">Nota</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413196983">
-          <posattr x="84.000000"
-                   y="179.000000"/>
+          <posattr x="121.000000"
+                   y="175.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4060,7 +3963,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,1,10),(1,3,4),(2,2,9),(3,4,8),(4,3,6),(2,4,8),(4,1,10)]</text>
+                version="4.0.1">[(1,&quot;1&quot;,&quot;10&quot;),(1,&quot;3&quot;,&quot;7&quot;),(2,&quot;2&quot;,&quot;9&quot;),(3,&quot;4&quot;,&quot;8&quot;),(4,&quot;3&quot;,&quot;6&quot;),(2,&quot;4&quot;,&quot;8&quot;),(4,&quot;1&quot;,&quot;10&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413085861">
@@ -4079,15 +3982,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-45.500000"
-                 y="-32.000000"
+        <marking x="68.500000"
+                 y="-37.000000"
                  hidden="false">
           <snap snap_id="0"
                 anchor.horizontal="3"
                 anchor.vertical="1"/>
         </marking>
         <type id="ID1413085862">
-          <posattr x="382.500000"
+          <posattr x="383.000000"
                    y="-86.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4098,11 +4001,11 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">Licenta</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413208039">
-          <posattr x="503.000000"
-                   y="-63.000000"/>
+          <posattr x="536.000000"
+                   y="-69.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4112,7 +4015,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,2,&quot;L1&quot;),(2,4,&quot;L2&quot;),(3,3,&quot;L3&quot;),(4,2,&quot;L4&quot;)]</text>
+                version="4.0.1">[(1,&quot;2&quot;,&quot;L1&quot;),(2,&quot;4&quot;,&quot;L2&quot;),(3,&quot;3&quot;,&quot;L3&quot;),(4,&quot;2&quot;,&quot;L4&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413086001">
@@ -4131,15 +4034,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-1.500000"
-                 y="41.000000"
+        <marking x="52.000000"
+                 y="42.000000"
                  hidden="false">
           <snap snap_id="0"
                 anchor.horizontal="3"
                 anchor.vertical="2"/>
         </marking>
         <type id="ID1413086002">
-          <posattr x="386.500000"
+          <posattr x="383.000000"
                    y="124.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4150,10 +4053,10 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">Profesor</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413203726">
-          <posattr x="762.000000"
+          <posattr x="675.500000"
                    y="148.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4164,7 +4067,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,&quot;Ciobaca&quot;,&quot;Stefan&quot;,&quot;Conf&quot;),(2,&quot;Captarencu&quot;,&quot;Oana&quot;,&quot;Lect&quot;),(3,&quot;Buraga&quot;,&quot;Sabin&quot;,&quot;Conf&quot;),(4,&quot;Masalagiu&quot;,&quot;Cristian&quot;,&quot;Prof&quot;)]</text>
+                version="4.0.1">[(1,&quot;Ciobaca&quot;,&quot;Stefan&quot;),(2,&quot;Captarencu&quot;,&quot;Oana&quot;),(3,&quot;Buraga&quot;,&quot;Sabin&quot;),(4,&quot;Masalagiu&quot;,&quot;Cristian&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413086144">
@@ -4183,15 +4086,15 @@ restul</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-43.500000"
-                 y="-32.000000"
+        <marking x="-34.000000"
+                 y="-23.000000"
                  hidden="false">
           <snap snap_id="0"
-                anchor.horizontal="3"
+                anchor.horizontal="2"
                 anchor.vertical="1"/>
         </marking>
         <type id="ID1413086145">
-          <posattr x="-128.500000"
+          <posattr x="-120.000000"
                    y="-85.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4202,11 +4105,11 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">Curs</text>
+                version="4.0.1">TABELE</text>
         </type>
         <initmark id="ID1413191230">
-          <posattr x="-349.500000"
-                   y="-62.000000"/>
+          <posattr x="-373.500000"
+                   y="-69.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4216,7 +4119,7 @@ restul</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,&quot;RPA&quot;,3),(2,&quot;LFAC&quot;,2),(3,&quot;BD&quot;,2),(4,&quot;SD&quot;,1)]</text>
+                version="4.0.1">[(1,&quot;RPA&quot;,&quot;3&quot;),(2,&quot;LFAC&quot;,&quot;2&quot;),(3,&quot;BD&quot;,&quot;2&quot;),(4,&quot;SD&quot;,&quot;1&quot;)]</text>
         </initmark>
       </place>
       <place id="ID1413113313">
@@ -4332,7 +4235,7 @@ restul</text>
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="Solid"/>
+                  type="solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>get</text>
@@ -4414,7 +4317,7 @@ restul</text>
                    currentcyckle="2"/>
         <transend idref="ID1413111622"/>
         <placeend idref="ID1413113747"/>
-        <annot id="ID1413115496">
+        <annot id="ID1413217025">
           <posattr x="-42.000000"
                    y="53.000000"/>
           <fillattr colour="White"
@@ -4446,7 +4349,7 @@ restul</text>
                    currentcyckle="2"/>
         <transend idref="ID1413111622"/>
         <placeend idref="ID1413113313"/>
-        <annot id="ID1413115942">
+        <annot id="ID1413217026">
           <posattr x="210.000000"
                    y="53.000000"/>
           <fillattr colour="White"
@@ -4462,12 +4365,96 @@ restul</text>
         </annot>
       </arc>
       <constraints/>
+      <Aux id="ID1413306650">
+        <posattr x="-336.000000"
+                 y="-168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>CURSURI:ID,NUME,AN</text>
+      </Aux>
+      <Aux id="ID1413308116">
+        <posattr x="-336.000000"
+                 y="252.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>STUDENTI:ID,NUME,PRENUME</text>
+      </Aux>
+      <Aux id="ID1413308854">
+        <posattr x="23.000000"
+                 y="252.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>NOTE:ID,ID_STUD,VALOARE</text>
+      </Aux>
+      <Aux id="ID1413309595">
+        <posattr x="378.000000"
+                 y="275.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>PROFESORI:ID,NUME,PRENUME</text>
+      </Aux>
+      <Aux id="ID1413310339">
+        <posattr x="19.000000"
+                 y="-168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>SALI:ID,ETAJ,CAPACITATE</text>
+      </Aux>
+      <Aux id="ID1413311086">
+        <posattr x="336.000000"
+                 y="-157.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>LICENTE:ID_STUD,ID_PROF,NUME_L</text>
+      </Aux>
     </page>
     <page id="ID1413123955">
       <pageattr name="Procesare select"/>
       <place id="ID1413131227">
-        <posattr x="-240.000000"
-                 y="58.000000"/>
+        <posattr x="-270.000000"
+                 y="126.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -4489,8 +4476,8 @@ restul</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413131228">
-          <posattr x="-194.500000"
-                   y="34.000000"/>
+          <posattr x="-224.500000"
+                   y="102.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4503,8 +4490,8 @@ restul</text>
                 version="4.0.1">Ldrept</text>
         </type>
         <initmark id="ID1413131229">
-          <posattr x="-183.000000"
-                   y="81.000000"/>
+          <posattr x="-213.000000"
+                   y="149.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4518,8 +4505,8 @@ restul</text>
         </initmark>
         <port id="ID1413133956"
               type="In">
-          <posattr x="-264.000000"
-                   y="41.000000"/>
+          <posattr x="-294.000000"
+                   y="109.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -4530,6 +4517,239 @@ restul</text>
                     bold="false"/>
         </port>
       </place>
+      <place id="ID1413218868">
+        <posattr x="-190.000000"
+                 y="273.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Selectare
+tabel</text>
+        <ellipse w="82.000000"
+                 h="44.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="94.000000"
+                 y="43.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="3"
+                anchor.vertical="2"/>
+        </marking>
+        <type id="ID1413218869">
+          <posattr x="-128.500000"
+                   y="247.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">StringList</text>
+        </type>
+        <initmark id="ID1413218870">
+          <posattr x="18.500000"
+                   y="298.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">[&quot;Studenti&quot;,&quot;Note&quot;,&quot;Profesori&quot;,&quot;Cursuri&quot;,&quot;Sali&quot;,&quot;Licente&quot;]</text>
+        </initmark>
+      </place>
+      <place id="ID1413225639">
+        <posattr x="64.000000"
+                 y="210.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Selectare
+Studenti</text>
+        <ellipse w="78.000000"
+                 h="44.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1413225640">
+          <posattr x="109.000000"
+                   y="184.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">UNIT</text>
+        </type>
+        <initmark id="ID1413225641">
+          <posattr x="149.000000"
+                   y="235.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">id,nume,prenume</text>
+        </initmark>
+      </place>
+      <place id="ID1413258273">
+        <posattr x="398.000000"
+                 y="107.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Clauza 
+studenti</text>
+        <ellipse w="60.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1413258274">
+          <posattr x="437.000000"
+                   y="83.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">UNIT</text>
+        </type>
+        <initmark id="ID1413258275">
+          <posattr x="454.000000"
+                   y="130.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </initmark>
+      </place>
+      <trans id="ID1413259274"
+             explicit="false">
+        <posattr x="252.000000"
+                 y="153.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Clauze</text>
+        <box w="60.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1413296046">
+          <posattr x="213.000000"
+                   y="184.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </cond>
+        <time id="ID1413259276">
+          <posattr x="296.500000"
+                   y="184.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </time>
+        <code id="ID1413259277">
+          <posattr x="316.500000"
+                   y="101.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </code>
+        <priority id="ID1413259279">
+          <posattr x="184.000000"
+                   y="122.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </priority>
+      </trans>
       <constraints/>
     </page>
     <page id="ID1413123454">
@@ -4862,10 +5082,10 @@ restul</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="594"
-                 y="275"
-                 width="943"
-                 height="517">
+                 x="291"
+                 y="122"
+                 width="1138"
+                 height="679">
         <sheets>
           <cpnsheet id="ID2215"
                     panx="84.000000"
@@ -4877,28 +5097,10 @@ restul</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1412325101"
-                    panx="-107.250000"
-                    pany="38.000000"
+                    panx="241.750000"
+                    pany="51.000000"
                     zoom="1.000000"
                     instance="ID1412324797">
-            <zorder>
-              <position value="0"/>
-            </zorder>
-          </cpnsheet>
-          <cpnsheet id="ID1412734854"
-                    panx="-14.000000"
-                    pany="40.000000"
-                    zoom="1.000000"
-                    instance="ID1412733411">
-            <zorder>
-              <position value="0"/>
-            </zorder>
-          </cpnsheet>
-          <cpnsheet id="ID1413083256"
-                    panx="-113.000000"
-                    pany="55.000000"
-                    zoom="1.000000"
-                    instance="ID1413083208">
             <zorder>
               <position value="0"/>
             </zorder>
@@ -4917,9 +5119,18 @@ restul</text>
                      decl="ID1412366487">
             <zorder/>
           </textsheet>
+          <cpnsheet id="ID1412734854"
+                    panx="-3.000000"
+                    pany="90.000000"
+                    zoom="1.000000"
+                    instance="ID1412733411">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
           <cpnsheet id="ID1413124458"
-                    panx="0.000000"
-                    pany="0.000000"
+                    panx="-119.000000"
+                    pany="147.000000"
                     zoom="1.000000"
                     instance="ID1413123957">
             <zorder>
@@ -4927,10 +5138,19 @@ restul</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413127007"
-                    panx="129.000000"
-                    pany="84.000000"
+                    panx="111.000000"
+                    pany="73.000000"
                     zoom="1.000000"
                     instance="ID1413123456">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+          <cpnsheet id="ID1413083256"
+                    panx="-97.000000"
+                    pany="11.000000"
+                    zoom="1.000000"
+                    instance="ID1413083208">
             <zorder>
               <position value="0"/>
             </zorder>
@@ -4938,13 +5158,13 @@ restul</text>
         </sheets>
         <zorder>
           <position value="0"/>
+          <position value="1"/>
+          <position value="3"/>
+          <position value="2"/>
           <position value="4"/>
           <position value="5"/>
-          <position value="1"/>
           <position value="6"/>
           <position value="7"/>
-          <position value="2"/>
-          <position value="3"/>
         </zorder>
       </cpnbinder>
     </binders>
@@ -5039,17 +5259,6 @@ restul</text>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
           <IndexNode expanded="false"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
